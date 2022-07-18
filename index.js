@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FlatList, Platform, StyleSheet, Text, TextInput, View, ViewPropTypes } from 'react-native';
+import { FlatList, Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export const AutocompleteInput = (props) => {
   function renderResultList() {
@@ -60,7 +60,7 @@ AutocompleteInput.propTypes = {
    * These styles will be applied to the container which
    * surrounds the autocomplete component.
    */
-  containerStyle: ViewPropTypes ? ViewPropTypes.style : PropTypes.object,
+  containerStyle: PropTypes.object,
   /**
    * Assign an array of data objects which should be
    * rendered in respect to the entered text.
@@ -78,11 +78,11 @@ AutocompleteInput.propTypes = {
    * These styles will be applied to the container which surrounds
    * the textInput component.
    */
-  inputContainerStyle: ViewPropTypes ? ViewPropTypes.style : PropTypes.object,
+  inputContainerStyle: PropTypes.object,
   /**
    * These style will be applied to the result list.
    */
-  listContainerStyle: ViewPropTypes ? ViewPropTypes.style : PropTypes.object,
+  listContainerStyle: PropTypes.object,
   /**
    * `onShowResults` will be called when list is going to
    * show/hide results.
